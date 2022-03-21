@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+    nav {
+        height: 70px;
+        width: 100%;
+        background-color: var(--color-secundaria);
+        margin: 0 auto;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul li {
+        color: #8d8d8d;
+        background-color: var(--color-secundaria);
+        padding: 15px;
+        border-radius: 50%;
+        transition: all 0.5s;
+    }
+
+    nav ul .active {
+        color: #1eff00;
+        background-color: var(--color-primaria);
+        transform: scale(1.2);
+    }
+}
