@@ -5,32 +5,34 @@ import Icon from "../fonticon/Icon";
 
 export default function Nav(props) {
     useEffect(() => {
-        const BtnAdd = document.getElementById("BtnAdd");
-        BtnAdd.addEventListener("click", () => {
-            if (props.showmodal === true) {
-                props.setshowmodal(false);
-                BtnAdd.classList.remove("active");
-                return;
-            }
+        const Pages = document.getElementsByClassName("pagination");
+        const currentPage = document.getElementById(props.CurrentPage);
 
-            BtnAdd.classList.add("active");
-            props.setshowmodal(true);
-        });
+        for (let i = 0; i < Pages.length; i++) {
+            if (Pages[i].classList.contains("active"))
+                Pages[i].classList.remove("active");
+
+            Pages[i].addEventListener("click", (e) => {
+                props.SetCurrentPage(e.target.classList[0]);
+            });
+        }
+
+        currentPage.classList.add("active");
     }, [props]);
 
     return (
         <nav>
             <ul>
-                <li>
-                    <Icon icon="fa-solid fa-border-all"></Icon>
+                <li className="dashboard pagination" id="dashboard">
+                    <Icon icon="dashboard fa-solid fa-border-all"></Icon>
                 </li>
 
-                <li id="BtnAdd">
-                    <Icon icon="fa-solid fa-plus"></Icon>
+                <li className="add pagination" id="add">
+                    <Icon icon="add fa-solid fa-plus"></Icon>
                 </li>
 
-                <li>
-                    <Icon icon="fa-solid fa-arrow-right-from-bracket"></Icon>
+                <li className="logout pagination" id="logout">
+                    <Icon icon="logout fa-solid fa-arrow-right-from-bracket"></Icon>
                 </li>
             </ul>
         </nav>

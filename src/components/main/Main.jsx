@@ -1,12 +1,20 @@
 import React from "react";
 import "./style.css";
 
-import Modal from "../modal/Modal";
+import Add from "../add/Add";
 
 export default function Main(props) {
-    return (
-        <main>
-            <Modal {...props}/>
-        </main>
-    );
+    if (props.CurrentPage === 'add') {        
+        return (
+            <main>
+                <Add />
+            </main>
+        );
+    }else{
+        return (
+            <main>
+                
+            </main>
+        )
+    }
 }

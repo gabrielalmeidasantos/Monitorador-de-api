@@ -1,0 +1,91 @@
+@media (max-width: 768px) {
+    .container-modal{
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal{
+        border-radius: 10px;
+        width: 90vw;
+        background-color: var(--color-secundaria);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-header{
+        width: 100%;
+        height: 50px;
+        padding: 15px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #0f0f1a;
+    }
+
+    .modal-header span{
+        font-size: 20px;
+        color: #8d8d8d;
+    }
+
+    .modal-main{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .modal-main form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .modal-main form label{
+        color: #8d8d8d;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .modal-main form input{
+        background-color: #000;
+        width: 100%;
+        border: none;
+        text-decoration: none;
+        border-radius: 5px;
+        color: #8d8d8d;
+        height: 40px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .modal-main .buttons{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .modal-main .buttons button{
+        margin: 30px 0 0;
+        border-radius: 5px;
+        border: none;
+        padding: 8px 10px;
+        margin-left: 10px;
+        color: #fff;
+    }
+
+    .modal-main .buttons .btn-cancelar{
+        background-color: #6b0000;
+    }
+    
+    .modal-main .buttons .btn-adicionar{
+        background-color: #0a5800;
+    }
+    
+    .modal-main .buttons button:hover{
+        transform: scale(1.1);
+    }
+}
