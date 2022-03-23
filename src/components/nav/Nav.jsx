@@ -30,10 +30,6 @@ export default function Nav(props) {
                 <li className="add pagination" id="add">
                     <Icon icon="add fa-solid fa-plus"></Icon>
                 </li>
-
-                <li className="logout pagination" id="logout">
-                    <Icon icon="logout fa-solid fa-arrow-right-from-bracket"></Icon>
-                </li>
             </ul>
         </nav>
     );

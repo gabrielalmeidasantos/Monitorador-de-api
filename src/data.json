@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "pokeapi",
+        "url": "http://localhost:3000",
+        "status": 200
+    },
+    {
+        "id": 2,
+        "nome": "temperatura",
+        "url": "http://localhost:3000",
+        "status": 200
+    },
+    {
+        "id": 3,
+        "nome": "github",
+        "url": "http://localhost:3000",
+        "status": 200
+    }
+]

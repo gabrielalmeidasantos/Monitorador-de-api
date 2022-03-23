@@ -8,6 +8,8 @@
 
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+
+    overflow-x: hidden;
 }
 
 :root{
@@ -24,3 +26,16 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;             
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--color-primaria);      
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-secundaria);   
+    border-radius: 20px;      
+  }
