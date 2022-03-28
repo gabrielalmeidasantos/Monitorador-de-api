@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./style.css";
+import requestApi from "../requisicao/requisicao";
 
 export default function Add(props) {
     useEffect(() => {
@@ -12,17 +13,38 @@ export default function Add(props) {
             let apelido = InputApelido.value;
             let url = InputUrl.value;
 
-            props.SetAPIs((api) => [
-                ...api,
-                {
-                    id: props.APIs,
-                    nome: apelido,
-                    url: url,
-                },
-            ]);
+            requestApi(url)
+                .then((response) => {
+                    props.SetAPIs((api) => [
+                        ...api,
+                        {
+                            id: api.length + 1,
+                            nome: apelido,
+                            status : response ? response : 'Undefined',
+                            url: url,
+                        },
+                    ]);
+                })
+                .catch((err) => {
+                    props.SetAPIs((api) => [
+                        ...api,
+                        {
+                            id: api.length + 1,
+                            nome: apelido,
+                            status : err ? err : 'Undefined',
+                            url: url,
+                        },
+                    ]);
+                });
+
+
+
+            alert("Api adicionada com sucesso");
 
             InputApelido.value = "";
             InputUrl.value = "";
+
+            props.SetCurrentPage("dashboard")
         });
     }, []);
 

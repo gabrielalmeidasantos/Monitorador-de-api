@@ -12,13 +12,17 @@ export default function Main(props) {
                     <Dashboard
                         RefreshApi={props.RefreshApi}
                         APIs={props.APIs}
+                        SetAPIs={props.SetAPIs}
                     />
                 </main>
             );
         case "add":
             return (
                 <main>
-                    <Add SetAPIs={props.SetAPIs} APIs={props.APIs} />
+                    <Add
+                        SetAPIs={props.SetAPIs}
+                        SetCurrentPage={props.SetCurrentPage}
+                    />
                 </main>
             );
         default:
