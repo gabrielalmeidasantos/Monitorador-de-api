@@ -14,5 +14,5 @@ export default function Status({ url, RefreshApi, status }) {
             });
     }
 
-    return <span className="status">Status: {stateStatus}</span>;
+    return <span className="status">Status: {stateStatus} </span>;
 }
